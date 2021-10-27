@@ -1,6 +1,8 @@
 const newDeckButton = document.getElementById("new-deck");
 const drawCardsBtn = document.getElementById("draw-cards");
 const cardTable = document.getElementById("card-table");
+const player1 = document.querySelector(".player-1");
+const player2 = document.querySelector(".player-2");
 
 let newDeck = false;
 let deckId = "";
@@ -23,11 +25,8 @@ function drawCards() {
     .then((res) => res.json())
     .then((data) => {
       console.log(data.cards);
-      cardTable.innerHTML = `
-          <img src=${data.cards[0].image} alt=${data.cards[0].code} />
-          <img src=${data.cards[1].image} alt=${data.cards[1].code} />
-
-          `;
+      player1.innerHTML = `<img src=${data.cards[0].image} alt=${data.cards[0].code} />`;
+      player2.innerHTML = `<img src=${data.cards[1].image} alt=${data.cards[1].code} />`;
     });
 }
 
