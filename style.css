@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#draw-cards {
+  visibility: hidden;
+}
+#card-table {
+  background: lightgreen;
+  width: 400px;
+  height: 400px;
+}
+
+.card {
+  width: 150px;
+  height: 200px;
+}
